@@ -9,10 +9,12 @@ import probtest.langs.python
 import probtest.langs.c
 import probtest.langs.cxx
 
+
 def main():
 	parser = argparse.ArgumentParser(description="SImple competitive programming judge")
 	parser.add_argument("file", help="file to judge")
-	parser.add_argument("--lang", nargs="?" ,type=ascii, help="manually specify the file's language")
+	parser.add_argument("--lang", default=argparse.SUPPRESS, help="manually specify the file's language")
+	parser.add_argument('--foo', default=argparse.SUPPRESS)
 	
 	if len(sys.argv)==1:
     		parser.print_help(sys.stderr)
