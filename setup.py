@@ -7,6 +7,6 @@ setup(
 	author="Andrei S.",
 	author_email="andreisva2023@gmail.com",
 	license="MIT",
-	packages=["src"],
-	scripts=["probtest"]
+	packages=["probtest"],
+	scripts=["scripts/probtest"]
 )
