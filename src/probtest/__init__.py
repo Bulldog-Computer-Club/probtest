@@ -10,6 +10,3 @@ def main(argv):
 	parser.add_argument("file", nargs="+", help="file to judge")
 
 	args = parser.parse_args(argv)
-
-if __name__ == "__main__":
-	main(sys.argv)
