@@ -1,4 +1,5 @@
 from setuptools import setup
+from setuptools import find_packages
 
 setup(
 	name="probtest",
@@ -6,7 +7,7 @@ setup(
 	description="A Simple Competitive Programming Judge",
 	author="Andrei S.",
 	author_email="andreisva2023@gmail.com",
+	packages=["probtest", "probtest/langs"],
 	license="MIT",
-	packages=["probtest"],
 	scripts=["scripts/probtest"]
 )

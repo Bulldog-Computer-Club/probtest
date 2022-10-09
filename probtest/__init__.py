@@ -3,13 +3,23 @@ import sys
 import json
 import argparse
 
-import langs.util
+import probtest.langs.util
 
-import langs.python
-import langs.c
-import langs.cxx
+import probtest.langs.python
+import probtest.langs.c
+import probtest.langs.cxx
 
-parser = argparse.ArgumentParser(description="SImple competitive programming judge")
-parser.add_argument("file", nargs="+", help="file to judge")
+def main():
+	parser = argparse.ArgumentParser(description="SImple competitive programming judge")
+	parser.add_argument("file", help="file to judge")
+	parser.add_argument("--lang", nargs="?" ,type=ascii, help="manually specify the file's language")
+	
+	if len(sys.argv)==1:
+    		parser.print_help(sys.stderr)
+    		sys.exit(1)
 
-args = parser.parse_args(sys.argv)
+	args = parser.parse_args(sys.argv)
+	return 0
+
+if __name__ == "__main__":
+	main()

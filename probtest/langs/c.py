@@ -1,3 +1,3 @@
-import langs.util
+import probtest.langs.util
 
-langs.util.supported_langs["c"] = True
+probtest.langs.util.supported_langs["c"] = True
