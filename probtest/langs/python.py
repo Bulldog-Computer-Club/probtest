@@ -1,3 +1,9 @@
 import probtest.langs.util
 
-probtest.langs.util.supported_langs["py"] = True
+import os
+
+class ProbtestPython(probtest.langs.util.LangTest):
+	def run_hook(self):
+		os.system(f"python3 {self.file}")
+
+probtest.langs.util.supported_langs["py"] = ProbtestPython
