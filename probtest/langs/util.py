@@ -6,8 +6,10 @@ import multiprocessing
 supported_langs = {}
 
 class LangTest:
-	def __init__(self, file):
+	def __init__(self, file, timeout):
 		self.file = file
+		self.timeout = timeout
+		self.output = None
 
 	def run_tests(self):
 		start = datetime.datetime.now()
@@ -16,7 +18,7 @@ class LangTest:
 		
 		# Timeout for solution
 		# TODO: make this value configurable
-		p.join(1)
+		p.join(self.timeout)
 
 		# make sure process is dead
 		if p.is_alive():

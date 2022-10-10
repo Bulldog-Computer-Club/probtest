@@ -4,6 +4,6 @@ import os
 
 class ProbtestPython(probtest.langs.util.LangTest):
 	def run_hook(self):
-		os.system(f"python3 {self.file}")
+		self.output = os.popen(f"python3 {self.file}").read()
 
 probtest.langs.util.supported_langs["py"] = ProbtestPython
