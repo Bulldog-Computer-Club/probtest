@@ -1,0 +1,11 @@
+# lines starting with a hashtag character are ignored
+2
+1 1
+2 2
+=
+6
+--
+3
+10 1
+2 3
+=
