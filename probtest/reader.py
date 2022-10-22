@@ -8,6 +8,9 @@ def read_config(file):
 			test_cases = f.read().split("--")
 			for test_case in test_cases:
 				test_rule = test_case.split("=")
+				for line in test_rule:
+					if line[0] == "#":
+						del line
 				tests.append({ "input": test_rule[0].split("\n"), "output": test_rule[1].split("\n")})
 		return tests
 	else:
