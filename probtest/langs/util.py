@@ -20,10 +20,7 @@ class LangTest:
 			self.run_test(test)
 
 	def run_with_input(self, command, input):
-		process=subprocess.Popen([command],
-			stdin=subprocess.PIPE,
-			stdout=subprocess.PIPE
-			stderr=subprocess.PIPE)
+		process=subprocess.Popen([command], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		stdoutdata,stderrdata=process.communicate(input=input)
 		return (stdoutdata, stderrdata)
 
